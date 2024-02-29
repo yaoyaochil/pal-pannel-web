@@ -1,0 +1,47 @@
+{
+  "name": "web-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "createIcon": "node ./script/createIcon.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.0",
+    "autoprefixer": "^10.4.17",
+    "mitt": "^3.0.1",
+    "nprogress": "^0.2.0",
+    "oh-router": "^0.4.0",
+    "oh-router-react": "^0.0.11",
+    "postcss": "^8.4.35",
+    "prompt-sync": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@types/nprogress": "^0.2.3",
+    "@types/react": "^18.2.56",
+    "@types/react-dom": "^18.2.19",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "antd": "^5.14.2",
+    "axios": "^1.6.7",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "unocss": "^0.58.5",
+    "vite": "^5.1.4",
+    "zustand": "^4.5.1"
+  },
+  "volta": {
+    "node": "20.11.1"
+  }
+}
