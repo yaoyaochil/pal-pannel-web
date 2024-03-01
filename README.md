@@ -17,7 +17,7 @@
 
 以下是 pal-pannel 服务器管理系统目前的一些截图：
 
-<img width="1919" alt="image" src="https://private-user-images.githubusercontent.com/49603204/308928810-af650dec-b130-4705-a28a-707ab3ef19a7.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDkyMjI1ODEsIm5iZiI6MTcwOTIyMjI4MSwicGF0aCI6Ii80OTYwMzIwNC8zMDg5Mjg4MTAtYWY2NTBkZWMtYjEzMC00NzA1LWEyOGEtNzA3YWIzZWYxOWE3LmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwMjI5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDIyOVQxNTU4MDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMjVlMDkxNDhhMjZlNGJhODdiY2I4NzMzNmFhMGZhZjU3NDI4N2M5MjJkODdiODg3NzJlZjc4ZTdlYThlYTJhJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.wXxeyCE0Ci4FDLKmdD1dwAaP14abEQfDH_u8eYJRAxk">
+<img width="1919" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/af7a8bff-3730-46c1-9ee6-38e52d03aed8">
 <img width="1919" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/60dc5665-53ba-4498-9d2d-3b132e60b7f4">
 <img width="1918" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/f20598ac-5a1c-43d8-ac3d-1acc9b5c3b6c">
 
