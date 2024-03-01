@@ -1,4 +1,4 @@
-import {Button, Divider, Form} from "antd";
+import {Affix, Button, Divider, Form} from "antd";
 import OptionsBasic from "@/page/server/options/basic";
 import {GameOptions} from "@/global/type/gameOptions.ts";
 import OptionPal from "@/page/server/options/pal";
@@ -6,6 +6,8 @@ import {useEffect, useState} from "react";
 import useServerStore from "@/store/useServerStore.ts";
 import {getPalOptions, setPalOptions} from "@/api/palOptions.ts";
 import {CloudSyncOutlined, CloudUploadOutlined} from "@ant-design/icons";
+import OptionPlayer from "@/page/server/options/player";
+import OptionOther from "@/page/server/options/other";
 
 
 const ServerBasicView = () => {
@@ -54,18 +56,23 @@ const ServerBasicView = () => {
             <div className={"flex gap-3.5"}>
                 {OptionsBasic()}
                 {OptionPal()}
+                {OptionPlayer()}
+                {OptionOther()}
             </div>
-            <Form.Item className={"mt-2"} labelCol={{offset:12}}>
-                <Divider />
-                <div className={"w-full flex"}>
-                    <div className={"ml-auto flex gap-3"}>
-                        <Button loading={loading} className={"ml-auto"} icon={<CloudSyncOutlined />} onClick={getOptions}>刷新数据</Button>
-                        <Button loading={loading} className={"ml-auto"} type="primary" htmlType="submit" icon={<CloudUploadOutlined />}>
-                            提交修改
-                        </Button>
+            <Affix offsetBottom={32}>
+                <Form.Item className={"mt-2"} labelCol={{offset:12}}>
+                    <div className={"w-full flex flex-col bg-white"}>
+                        <Divider />
+                        <div className={"ml-auto flex gap-3"}>
+                            <Button loading={loading} className={"ml-auto"} icon={<CloudSyncOutlined />} onClick={getOptions}>刷新数据</Button>
+                            <Button loading={loading} className={"ml-auto"} type="primary" htmlType="submit" icon={<CloudUploadOutlined />}>
+                                提交修改
+                            </Button>
+                        </div>
                     </div>
-                </div>
-            </Form.Item>
+                </Form.Item>
+            </Affix>
+
         </Form>
     )
 }

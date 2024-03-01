@@ -3,8 +3,6 @@ import DashboardIcon from "@/icon/dashboard-icon";
 import OptionIcon from "@/icon/option-icon";
 import GamelineIcon from "@/icon/gameline-icon";
 import SwitchlineIcon from "@/icon/switchline-icon";
-import PetIcon from "@/icon/pet-icon";
-import UsersIcon from "@/icon/users-icon";
 import UserEditorIcon from "@/icon/usereditor-icon";
 import router from "@/router/router.tsx";
 import {useEffect, useState} from "react";
@@ -39,18 +37,13 @@ const MenuView = () => {
             children: [
                 {
                     key: 'options',
-                    label: '基本配置',
+                    label: '服务器配置',
                     icon: <GamelineIcon />,
                 },
                 {
-                    key: 'pal-options',
-                    label: '帕鲁相关配置',
-                    icon: <PetIcon />,
-                },
-                {
-                    key: 'player-options',
-                    label: '玩家相关配置',
-                    icon: <UsersIcon />,
+                    key: 'backup',
+                    label: '备份管理',
+                    icon: <GamelineIcon />,
                 }
             ]
         }

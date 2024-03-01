@@ -6,8 +6,6 @@ import RouterHolderView from "@/page/routerHolder.tsx";
 import UserView from "@/page/user";
 import {ProgressMiddleware} from "@/router/middlewares/progress.ts";
 import ServerBasicView from "@/page/server/options";
-import ServerPalOptionsView from "@/page/server/pa-options";
-import ServerPlayerOptionsView from "@/page/server/player-options";
 import {AuthRouterMiddleware} from "@/router/middlewares/auth.ts";
 
 
@@ -93,24 +91,6 @@ const router = new Router<RouteMeta>({
                             element: <ServerBasicView />,
                             meta: {
                                 title: "基本配置",
-                                icon: "home",
-                                auth: true
-                            }
-                        },
-                        {
-                            path: "pal-options",
-                            element: <ServerPalOptionsView />,
-                            meta: {
-                                title: "帕鲁相关配置",
-                                icon: "home",
-                                auth: true
-                            }
-                        },
-                        {
-                            path: "player-options",
-                            element: <ServerPlayerOptionsView />,
-                            meta: {
-                                title: "玩家相关配置",
                                 icon: "home",
                                 auth: true
                             }
