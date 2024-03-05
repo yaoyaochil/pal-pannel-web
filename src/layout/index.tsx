@@ -10,7 +10,7 @@ const LayoutView = () => {
     const { Sider,Content,Header } = Layout
 
     return (
-        <div className={"w-full h-full"}>
+        <div className={"h-full w-full"}>
             <Layout className={"w-full h-full"}>
                 <Header style={{background: '#fff'}}>
                     <div className={"w-full h-full flex items-center"}>

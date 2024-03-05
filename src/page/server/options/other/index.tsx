@@ -1,4 +1,4 @@
-import {Card,Form,Slider,Switch,Select} from "antd";
+import {Card,Form,Slider,Switch} from "antd";
 
 
 export interface OtherOptionsType {
@@ -14,12 +14,11 @@ export interface OtherOptionsType {
     EnemyDropItemRate: number; // 道具掉落物品率
     PalEggDefaultHatchingTime: number; // 宠物蛋默认孵化时间（小时）
     bEnableInvaderEnemy: boolean; // 启用袭击事件
-    DeathPenalty: string; // 死亡惩罚 None Item ItemAndEquipment All 分别是 无 损失物品 损失物品和装备 全部
 }
 
 const OptionOther = () => {
     return (
-        <Card size="small" title="其他属性" style={{width: 300}}>
+        <Card size="small" title="其他属性" className="w-full px-4">
             <Form.Item<OtherOptionsType> label={"白天流逝速度"} name={"DayTimeSpeedRate"}>
                 <Slider max={5} min={0.1} step={0.1}/>
             </Form.Item>
@@ -55,14 +54,6 @@ const OptionOther = () => {
             </Form.Item>
             <Form.Item<OtherOptionsType> label={"启用袭击事件"} name={"bEnableInvaderEnemy"}>
                 <Switch />
-            </Form.Item>
-            <Form.Item<OtherOptionsType> label={"死亡惩罚"} name={"DeathPenalty"}>
-                <Select>
-                    <Select.Option value="None">无</Select.Option>
-                    <Select.Option value="Item">损失物品</Select.Option>
-                    <Select.Option value="ItemAndEquipment">损失物品和装备</Select.Option>
-                    <Select.Option value="All">全部</Select.Option>
-                </Select>
             </Form.Item>
         </Card>
     )

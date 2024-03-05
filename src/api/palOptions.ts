@@ -1,6 +1,6 @@
 import service from "@/utils/request.ts";
 import {GlobalResponse} from "@/global/type/response";
-import {GameOptions} from "@/global/type/gameOptions.ts";
+import {GameOptions, unlockRequest} from "@/global/type/gameOptions.ts";
 
 
 export const getPalOptions = ():Promise<GlobalResponse<GameOptions>> => {
@@ -10,10 +10,26 @@ export const getPalOptions = ():Promise<GlobalResponse<GameOptions>> => {
     });
 }
 
-export const setPalOptions = (data: GameOptions):Promise<GlobalResponse<{}>> => {
+export const setPalOptions = (data: GameOptions):Promise<GlobalResponse<object>> => {
     return service.request({
         method: "post",
         url: "/server/updateOptions",
         data,
+    });
+}
+
+
+export const unlockTo20 = (data: unlockRequest):Promise<GlobalResponse<object>> => {
+    return service.request({
+        method: "post",
+        url: "/server/unlockTo20",
+        data,
+    });
+}
+
+export const checkUnlockTo20 = ():Promise<GlobalResponse<boolean>> => {
+    return service.request({
+        method: "get",
+        url: "/server/checkUnlockTo20",
     });
 }

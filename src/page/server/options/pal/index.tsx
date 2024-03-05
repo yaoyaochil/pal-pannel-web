@@ -16,7 +16,7 @@ export interface PalOptionsType {
 const OptionPal = () => {
 
     return (
-        <Card size="small" title="帕鲁属性" style={{width: 300}}>
+        <Card size="small" title="帕鲁属性" className="w-full px-4">
             <Form.Item<PalOptionsType> label={"抓捕成功率"} name={"PalCaptureRate"}>
                 <Slider max={5} min={0.5} step={0.1} />
             </Form.Item>

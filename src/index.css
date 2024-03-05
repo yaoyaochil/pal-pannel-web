@@ -10,6 +10,6 @@ body {
 #root {
   height: 100vh;
   width: 100vw;
-  min-width: 800px;
-  min-height: 600px;
+  min-width: 1280px;
+  min-height: 720px;
 }

@@ -11,14 +11,12 @@ export interface GameSettingsType {
     Region: string,
     bUseAuth: boolean,
     BanListURL: string,
-    RCONEnabled?: boolean,
     PublicIP?: string,
-    RCONPort?: number,
 }
 
 const OptionsBasic = () => {
     return (
-        <Card size="small" title="基础配置" style={{ width: 300 }}>
+        <Card size="small" title="基础配置" className="w-full px-4">
             <Form.Item<GameSettingsType> label="服务器名称" name="ServerName">
                 <Input placeholder="请输入游戏名称"/>
             </Form.Item>
@@ -48,7 +46,7 @@ const OptionsBasic = () => {
                 <Switch />
             </Form.Item>
             <Form.Item<GameSettingsType> label="公共IP" name="PublicIP">
-                <Input placeholder="请输入IP"/>
+                <Input placeholder="请输入IP 可不填"/>
             </Form.Item>
             <Form.Item<GameSettingsType> label="黑名单(默认本地)" name="BanListURL">
                 <Input placeholder="请输入名单地址"/>

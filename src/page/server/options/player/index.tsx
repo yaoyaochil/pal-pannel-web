@@ -13,7 +13,7 @@ export interface PlayerOptionsType {
 
 const OptionPlayer = () => {
     return (
-        <Card size="small" title="玩家属性" style={{width: 300}}>
+        <Card size="small" title="玩家属性" className="w-full px-4">
             <Form.Item<PlayerOptionsType> label={"公会最大人数"} name={"GuildPlayerMaxNum"}>
                 <Slider max={100} min={1}/>
             </Form.Item>
