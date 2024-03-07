@@ -7,6 +7,7 @@ import UserView from "@/page/user";
 import {ProgressMiddleware} from "@/router/middlewares/progress.ts";
 import ServerBasicView from "@/page/server/options";
 import {AuthRouterMiddleware} from "@/router/middlewares/auth.ts";
+import ArchiveView from "@/page/server/archive";
 
 
 export interface RouteMeta {
@@ -52,7 +53,7 @@ const router = new Router<RouteMeta>({
                     path: "dashboard",
                     element: <Dashboard/>,
                     meta: {
-                        title: "首页",
+                        title: "控制台",
                         icon: "home",
                         auth: true
                     }
@@ -70,7 +71,7 @@ const router = new Router<RouteMeta>({
                             path: "user",
                             element: <UserView />,
                             meta: {
-                                title: "用户管理",
+                                title: "系统密码修改",
                                 icon: "home",
                                 auth: true
                             }
@@ -90,7 +91,16 @@ const router = new Router<RouteMeta>({
                             path: "options",
                             element: <ServerBasicView />,
                             meta: {
-                                title: "基本配置",
+                                title: "服务器配置",
+                                icon: "home",
+                                auth: true
+                            }
+                        },
+                        {
+                            path: "archive",
+                            element: <ArchiveView />,
+                            meta: {
+                                title: "存档管理",
                                 icon: "home",
                                 auth: true
                             }

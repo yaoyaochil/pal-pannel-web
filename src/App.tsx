@@ -2,7 +2,7 @@ import {RouterView} from "oh-router-react";
 import router from "@/router/router.tsx";
 import {ConfigProvider, theme, type ThemeConfig} from "antd";
 import {useEffect} from "react";
-
+import zhCN from 'antd/locale/zh_CN';
 function App() {
 
     // antd theme config
@@ -29,7 +29,7 @@ function App() {
     },[])
 
     return (
-        <ConfigProvider theme={themeConfig}>
+        <ConfigProvider theme={themeConfig} locale={zhCN}>
             <RouterView router={router} />
         </ConfigProvider>
     )

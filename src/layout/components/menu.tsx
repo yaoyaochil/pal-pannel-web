@@ -41,8 +41,8 @@ const MenuView = () => {
                     icon: <GamelineIcon />,
                 },
                 {
-                    key: 'backup',
-                    label: '备份管理',
+                    key: 'archive',
+                    label: '存档管理',
                     icon: <GamelineIcon />,
                 }
             ]

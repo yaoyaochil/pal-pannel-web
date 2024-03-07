@@ -1,7 +1,7 @@
 
 
 export type userInfoType = {
-    ID: number,
+    id: number,
     username: string,
     headerImg: string,
     nickName: string,

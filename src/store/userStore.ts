@@ -29,14 +29,14 @@ type Store = {
 
 /**
  * 用户信息
- * @param ID 用户ID
+ * @param id 用户ID
  * @param username 用户名
  * @param headerImg 用户头像
  * @param nickName 用户昵称
  * @param uuid 用户uuid
  */
 export interface UserInfoType {
-    ID: number,
+    id: number,
     username: string,
     headerImg: string,
     nickName: string,
@@ -53,7 +53,6 @@ export interface loginRequest {
     username: string,
     password: string,
     remember?: boolean
-
 }
 
 

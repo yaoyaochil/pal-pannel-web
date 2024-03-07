@@ -66,7 +66,7 @@ reqInterceptor.use(
                 if (useUserStore.getState().token) { // 如果有token，则添加token 和用户id
                     config.headers["x-token"] = useUserStore.getState().token;
                     config.headers["Content-Type"] = "application/json";
-                    config.headers["x-user-id"] = useUserStore.getState().userInfo?.ID;
+                    config.headers["x-user-id"] = useUserStore.getState().userInfo?.id;
                 }
             }
         }

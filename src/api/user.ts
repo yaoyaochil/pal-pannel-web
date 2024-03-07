@@ -25,7 +25,7 @@ export const login = (data: loginRequest):Promise<GlobalResponse<loginResponse>>
  * 退出登录
  * @param {object} data token
  */
-export const logout = (data: {token:string}):Promise<GlobalResponse<{}>> => {
+export const logout = (data: {token:string}):Promise<GlobalResponse<object>> => {
   return service.request({
     method: "post",
     url: "/logout",
@@ -42,5 +42,17 @@ export const getUserInfo = ():Promise<GlobalResponse<userInfoType>> => {
   return service.request({
     method: "get",
     url: "/user/getUserInfo",
+  });
+}
+
+/**
+ * 修改系统密码
+ * return GlobalResponse<{}>
+ */
+export const changePassword = (data: {password:string, newPassword:string}):Promise<GlobalResponse<object>> => {
+  return service.request({
+    method: "post",
+    url: "/user/changePassword",
+    data,
   });
 }
