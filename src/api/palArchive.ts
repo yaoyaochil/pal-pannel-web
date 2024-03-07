@@ -58,3 +58,16 @@ export const restoreArchive = (data:{id:number}):Promise<GlobalResponse<object>>
         data
     });
 }
+
+/**
+ * 删除归档
+ * @param data // 请求参数
+ * @param data.id // 归档ID
+ */
+export const removeArchive = (data:{id:number}):Promise<GlobalResponse<object>> => {
+    return service.request({
+        method: "post",
+        url: "/archive/deleteArchive",
+        data
+    });
+}

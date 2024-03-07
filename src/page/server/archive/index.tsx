@@ -1,7 +1,13 @@
-import { createArchive, getArchiveList, restoreArchive } from "@/api/palArchive";
+import {
+  createArchive,
+  getArchiveList,
+  removeArchive,
+  restoreArchive,
+} from "@/api/palArchive";
 import { PalArchive } from "@/global/type/palArchiveType";
-import { Button, Table, TableProps, message } from "antd";
+import { Button, Popconfirm, Table, TableProps, message } from "antd";
 import { useEffect, useState } from "react";
+import ArchiveInfoFormView from "./components";
 
 const ArchiveView = () => {
   const columns: TableProps<PalArchive>["columns"] = [
@@ -27,10 +33,17 @@ const ArchiveView = () => {
       title: "存档路径",
       dataIndex: "archivePath",
       key: "archivePath",
-      render: (text) => <Button type="default" onClick={() => {
-        navigator.clipboard.writeText(text);
-        message.success("拷贝成功");
-      }}>拷贝文件路径</Button>,
+      render: (text) => (
+        <Button
+          type="default"
+          onClick={() => {
+            navigator.clipboard.writeText(text);
+            message.success("拷贝成功");
+          }}
+        >
+          拷贝文件路径
+        </Button>
+      ),
     },
     {
       title: "文件大小",
@@ -44,15 +57,34 @@ const ArchiveView = () => {
       key: "action",
       render: (_, record) => (
         <div className="flex gap-3">
-          <Button type="primary" className="mr-2" onClick={() => {restore(record.ID)}}>
-            回档
-          </Button>
+          <Popconfirm
+            title={"确定要回档吗？"}
+            okText={"确定"}
+            cancelText={"取消"}
+            onConfirm={() => {
+              restore(record.ID);
+            }}
+          >
+            <Button type="primary" className="mr-2">
+              回档
+            </Button>
+          </Popconfirm>
           <Button type="default" className="mr-2">
             下载
           </Button>
-          <Button type="primary" danger>
-            删除
-          </Button>
+
+          <Popconfirm
+            title={"确定要删除存档吗？"}
+            okText={"确定"}
+            cancelText={"取消"}
+            onConfirm={() => {
+              deleteArchive(record.ID);
+            }}
+          >
+            <Button type="primary" danger>
+              删除
+            </Button>
+          </Popconfirm>
         </div>
       ),
     },
@@ -71,36 +103,55 @@ const ArchiveView = () => {
     }
   };
 
+  // 表格分页
   const onTableChange: TableProps<PalArchive>["onChange"] = (pagination) => {
     setPage(pagination.current || 1);
     setPageSize(pagination.pageSize || 10);
   };
 
-
-  const saveArchive = async () => {
-    const res = await createArchive({ archiveName: "test", archiveDesc: "test"});
+  // 备份存档
+  const saveArchive = async (data: {
+    archiveName: string;
+    archiveDesc: string;
+  }) => {
+    const res = await createArchive({
+      archiveName: data.archiveName,
+      archiveDesc: data.archiveDesc,
+    });
     if (res.code === 0) {
       getArchiveData({ page, pageSize });
     }
-  }
+  };
 
+  // 回档
   const restore = async (id: number) => {
     const res = await restoreArchive({ id });
     if (res.code === 0) {
       getArchiveData({ page, pageSize });
     }
-  }
+  };
+
+  // 删除存档
+  const deleteArchive = async (id: number) => {
+    const res = await removeArchive({ id });
+    if (res.code === 0) {
+      getArchiveData({ page, pageSize });
+    }
+  };
 
   useEffect(() => {
+    // 获取存档列表 依赖分页参数 page pageSize
     getArchiveData({ page, pageSize });
   }, [page, pageSize]);
 
   return (
     <div className="h-full w-full">
-      <div className="flex h-10 mb-2">
-        <Button type="primary" className="mr-2" onClick={saveArchive}>
-          备份存档
-        </Button>
+      <div className="flex h-10 mb-2 items-center">
+        <ArchiveInfoFormView onSubmit={saveArchive} />
+        <span className="text-gray-500 font-bold">
+          注意：归档服务器存档会同时归档服务器配置信息 如PalworldSettings.ini
+          WorldOptions.save（用于解锁据点帕鲁上限作用）
+        </span>
       </div>
       <Table
         size="middle"
