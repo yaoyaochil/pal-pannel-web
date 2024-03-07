@@ -20,6 +20,10 @@
 <img width="1919" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/af7a8bff-3730-46c1-9ee6-38e52d03aed8">
 <img width="1919" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/60dc5665-53ba-4498-9d2d-3b132e60b7f4">
 <img width="1918" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/f20598ac-5a1c-43d8-ac3d-1acc9b5c3b6c">
+<img width="1918" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/021d0853-7916-4a89-802b-a00bafb2df3d">
+<img width="1918" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/cba057d4-ee24-4c9d-8819-8afc2c0b3c9d">
+<img width="1918" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/206c8bbe-d79e-4d1f-9267-277f983d054e">
+<img width="1918" alt="image" src="https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/3df9f3cc-e7a5-41dc-8d85-252268242b8a">
 
 
 
