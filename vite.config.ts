@@ -9,9 +9,15 @@ export default defineConfig({
     server: {
         proxy: {
             '/api': {
-                target: 'http://localhost:8300',
+                target: 'http://localhost:8800',
                 changeOrigin: true,
                 rewrite: (path) => path.replace(/^\/api/, '')
+            },
+            '/socket': {
+                target: 'ws://localhost:8800/socket',
+                changeOrigin: true,
+                ws: true,
+                rewrite: (path) => path.replace(/^\/socket/, '')
             }
         }
     },

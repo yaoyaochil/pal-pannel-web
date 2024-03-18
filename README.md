@@ -64,10 +64,10 @@ npm run dev
 - 进行您的更改，并确保代码通过所有测试。
 - 提交一个带有您更改清晰描述的拉取请求。
 
-## 交流群
+## 联系我
 
-如果您有任何问题或建议，请加入我们的wechat群，我们将很乐意与您交流。
+如果您有任何问题或建议，请添加我的wechat，我们把酒言谈。
 
-![101709224238_ pic](https://github.com/yaoyaochil/pal-pannel-web/assets/49603204/eca40145-ea84-4cab-ab29-62cbdbcfb496)
+![101709224238_ pic](https://github.com/yaoyaochil/pal-pannel-server/assets/49603204/aed520f2-5f82-4cde-a0b2-89e64437c999)
 ## 许可证
 MIT

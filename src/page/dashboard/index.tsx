@@ -1,10 +1,10 @@
-
+import PalServerInitView from "@/page/dashboard/components/init.tsx";
 
 
 const Dashboard = () => {
     return (
-        <div>
-            控制台
+        <div className="w-full h-full">
+            <PalServerInitView />
         </div>
     );
 }
